@@ -12,7 +12,7 @@ def solution(p: float, x: np.array) -> tuple:
     # Не меняйте название функции и её аргументы
     x = x / 25
     alpha = 1 - p
-    return 2 * np.sum(x) / chi2.ppf(alpha / 2, 2 * len(x)), 2 * np.sum(x) / chi2.ppf(1 - alpha / 2, 2 * len(x))
+    return 2 * np.sum(x) / chi2.ppf(1 - alpha / 2, 2 * len(x)), 2 * np.sum(x) / chi2.ppf(alpha / 2, 2 * len(x))
     
 #     alpha = 1 - p
 #     loc = x.mean()
