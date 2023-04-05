@@ -11,11 +11,10 @@ def solution(p: float, x: np.array) -> tuple:
     # Измените код этой функции
     # Это будет вашим решением
     # Не меняйте название функции и её аргументы
-    x = x / 25
     alpha = 1 - p
-    left = min(1/2 - expon.ppf(alpha) / (n * (min(x) / 5**2)), 1/2 - expon.ppf(1 - alpha) / (n * (min_x / 5**2)))
-    right = max(1/2 - expon.ppf(alpha) / (n * (min(x) / 5**2)), 1/2 - expon.ppf(1 - alpha) / (n * (min_x / 5**2)))
-    return left, right
+    l = min(1/2 - expon.ppf(alpha) / (n * (min(x) / 5**2)), 1/2 - expon.ppf(1 - alpha) / (n * (min_x / 5**2)))
+    r = max(1/2 - expon.ppf(alpha) / (n * (min(x) / 5**2)), 1/2 - expon.ppf(1 - alpha) / (n * (min_x / 5**2)))
+    return l, r
     
 #     alpha = 1 - p
 #     loc = x.mean()
